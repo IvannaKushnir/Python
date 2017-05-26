@@ -13,7 +13,7 @@ students= []
 f = open('file_1.csv', 'r')
 reader = csv.reader(f)
 for row in reader:
-    student = Student(row[0].strip(), row[1].strip(), row[2].strip(), int(row[3].strip()), row[4].strip())
+	student = Student(row[0].strip(), row[1].strip(), row[2].strip(), int(row[3].strip()), row[4].strip())
 	students.append(student)
 	print row
 	
