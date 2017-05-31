@@ -8,21 +8,16 @@ class Person:
 		self.gender = gender	
 
 class Student(Person):
-	def __init__(self, name, surname, course, age, gender):
-		self.name = name
-		self.surname = surname
-		self.course = course
-		self.age = age
-		self.gender = gender
-
+	Person.__init__(self, name, surname, age, gender)
+	self.course = course
 
 	def __init__(self, row):
-		self.name = row[0].strip()
-		self.surname = row[1].strip()
-		self.course = row[2].strip()
-		self.age = int(row[3].strip())
-		self.gender = row[4].strip()		
-		students.append(student)
+		Student.__init__(self, row[0].strip(), row[1].strip(), row[2].strip(), int(row[3].strip()), row[4].strip())
+
+	def __str__(self):
+		return "Name: {}, Surname: {}, Age: {} years old, Gender: {}".format(self.name, self.surname, self.age, self.gender)
+		Students.append(s)
+
 
 students= []
 
@@ -38,4 +33,5 @@ for student in students:
 
 	def Search(name, surname):
 		for i in students:
-		    return "Hello, {} {}. Are you {} years old?".format(name, surname, age)
+			if name == name and surname == surname:
+				return i
