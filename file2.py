@@ -14,7 +14,7 @@ class Student(Person):
 	def __str__(self):
 		return "Name: {}, Surname: {}, Age: {} years old, Gender: {}, Course: {}".format(self.name, self.surname, self.age, self.gender, self.course)
 
-students = []
+students = {}
 try: 
 	f = open('file_1.csv', 'r')
 	reader = csv.reader(f)
