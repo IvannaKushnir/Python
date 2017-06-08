@@ -27,24 +27,21 @@ except IOError:
 	print "File not found"
 
 else:
-	for student in students:
-		if student.age > 30:
-			print student
+	for k, v in students.interitems():
+		if v.age > 30:
+			print v
 
 	print "1st search function"
 	def Search(name, surname):
 		for k, v in students.interitems():
-			if v.name == name and v.surname == surname:
-				return i
+			print student[s.name + " " + s.surname]
 
 	a = Search ("Harry", "Grey")
 	print a
 
 	print "2nd search function"
 	def SecondSearch(age):
-		for k, v in students.interitems():
-			if v.age == age:
-				yield v
+		return student[s.name + " " + s.surname]
 
 	a = SecondSearch (int(18))
 
